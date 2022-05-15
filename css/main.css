@@ -28,7 +28,7 @@ ul {
   margin-right: auto;
 }
 
-.section-title {
+.section__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -93,7 +93,7 @@ ul {
   margin-left: 93px;
 }
 
-.menu__button {
+.menu__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -133,28 +133,28 @@ ul {
   fill: currentColor;
 }
 
-.menu__button {
+.menu__link {
   color: var(--title-text-color);
   text-decoration: none;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu__button:hover, .menu__button:focus {
+.menu__link:hover, .menu__link:focus {
   color: var(--accent-color);
   text-decoration: none;
 }
 
-.menu__button:active {
+.menu__link:active {
   color: var(--title-text-color);
   text-decoration: none;
 }
 
-.menu__button.menu__button--current {
+.menu__link.menu__link--current {
   color: var(--accent-color);
 }
 
-.menu__button.menu__button--current::after {
+.menu__link.menu__link--current::after {
   content: "";
   display: block;
   position: absolute;
@@ -192,7 +192,7 @@ ul {
   text-decoration: none;
 }
 
-.hero-blok__title {
+.hero__title {
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
@@ -219,7 +219,7 @@ ul {
   background-size: contain;
 }
 
-.hero-blok__button {
+.hero__button {
   display: flex;
   justify-content: center;
   max-width: 200px;
@@ -479,14 +479,14 @@ ul {
   display: flex;
 }
 
-.advantage .advantage-section {
+.advantage .advantage__item {
   display: block;
   width: 270px;
   margin-bottom: 0px;
   margin-right: 30px;
 }
 
-.advantage .advantage-section:last-child {
+.advantage .advantage__item:last-child {
   margin-right: 0;
 }
 
@@ -497,7 +497,7 @@ p {
   margin: 0;
 }
 
-.advantage-icon {
+.advantage__box {
   display: flex;
   background-color: #F5F4FA;
   border-radius: 4px;
@@ -507,13 +507,13 @@ p {
   margin-bottom: 30px;
 }
 
-.advantage-icon__imagas {
+.advantage__icon {
   display: inline-flex;
   height: 70px;
   width: 70px;
 }
 
-.advantage-section__title {
+.advantage__title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -523,7 +523,7 @@ p {
   color: var(--title-text-color);
 }
 
-.advantage-section__description {
+.advantage__description {
   margin-top: 0;
   margin-bottom: 0px;
   font-weight: normal;
@@ -533,25 +533,98 @@ p {
   color: var(--primary-text-color);
 }
 
-.experts-blok {
+.team__box {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.container .experts__list {
+.container .team-item {
   padding-left: 0px;
   padding-right: 0px;
   background-color: var(--color-fone);
 }
 
-.experts__list {
+.team-item {
   margin-right: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.experts__list:last-child {
+.team-item:last-child {
   margin-right: 0px;
+}
+
+.friends {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--button-background-color);
+  margin-top: 50px;
+}
+
+.team__title {
+  font-style: normal;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.team__text {
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 10px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  padding-bottom: 16px;
+}
+
+.social {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social__link:hover, .social__link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social__item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.social__item:last-child {
+  margin-right: 0;
 }
 
 /*galery*/
@@ -560,15 +633,15 @@ p {
   margin-top: 50px;
 }
 
-.galery .produkts-foto {
+.galery .produkts__item {
   margin-right: 30px;
 }
 
-.galery .produkts-foto:last-child {
+.galery .produkts__item:last-child {
   margin-right: 0;
 }
 
-.produkts-foto__text {
+.produkts__text {
   position: absolute;
   bottom: 0;
   display: flex;
@@ -586,104 +659,31 @@ p {
   color: var(--color-fone);
 }
 
-.produkts-foto {
+.produkts__item {
   position: relative;
 }
 
-.produkts-foto__img {
+.produkts__img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.work-products {
+.section--no-padding-top {
   padding-top: 0;
 }
 
-.comand {
-  padding: 94px 0;
-}
-
-.friends {
-  display: flex;
-  flex-wrap: wrap;
-  background: var(--button-background-color);
-  margin-top: 50px;
-}
-
-.experts__name {
-  font-style: normal;
-  margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-}
-
-.experts__position {
-  font-style: normal;
-  font-weight: normal;
-  margin-top: 10px;
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-  padding-bottom: 16px;
-}
-
-.link-icon-blok {
-  display: flex;
-  padding: 0;
-  justify-content: center;
-}
-
-.link-icon-blok__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  color: #afb1b8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-icon-blok__link:hover, .link-icon-blok__link:focus {
-  background-color: #2196f3;
-  color: #ffffff;
-}
-
-.link-icon-blok__icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.link-icon-blok__item {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  margin-right: 10px;
-}
-
-.link-icon-blok__item:last-child {
-  margin-right: 0;
-}
-
 /*Постоянные клиенты*/
-.best-clients {
+.clients {
   display: flex;
   margin-top: 50px;
 }
 
-.best-clients__link {
+.team-section-background-color {
+  background-color: #F5F4FA;
+}
+
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -695,24 +695,24 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.best-clients__link:hover, .best-clients__link:focus {
+.clients__link:hover, .clients__link:focus {
   border: 1px solid #2196F3;
   color: #2196f3;
 }
 
-.best-clients__imagas {
+.clients__icon {
   width: 106px;
   height: 60px;
   fill: currentColor;
   padding: 0;
 }
 
-.best-clients__client {
+.clients__item {
   height: 92px;
   margin-right: 30px;
 }
 
-.best-clients__client:last-child {
+.clients__item:last-child {
   margin-right: 0;
 }
 
@@ -800,20 +800,6 @@ p {
   box-sizing: border-box;
 }
 
-.flex-element:hover .project__overlay {
-  transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.flex-element:focus .project__overlay {
-  transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.flex-element:hover .project__overlay {
-  opacity: 1;
-}
-
 .flex-element:nth-child(3n) {
   margin-right: 0px;
 }
@@ -856,6 +842,24 @@ p {
 
 .project__link:hover, .project__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project__link:hover .project__overlay {
+  transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project__link:focus .project__overlay {
+  transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project__link:hover .project__overlay {
+  opacity: 1;
+}
+
+.project__link:focus .project__overlay {
+  opacity: 1;
 }
 
 .project-title__logo {
