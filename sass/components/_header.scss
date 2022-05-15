@@ -37,7 +37,7 @@
     letter-spacing: 0.02em;
     text-decoration: none;
     margin-left: 93px;
-    &__button {
+    &__link {
       display: block;
       padding-top: 32px;
       padding-bottom: 32px;
@@ -77,7 +77,7 @@
     fill: currentColor; 
   }
   
-  .menu__button {
+  .menu__link {
     color: var(--title-text-color);
     text-decoration: none;
     position: relative;
@@ -93,7 +93,7 @@
     } 
   }
   
-  .menu__button.menu__button--current{
+  .menu__link.menu__link--current{
     color: var(--accent-color);
     &::after{
       content: "";
